@@ -6,7 +6,7 @@ OPENROWSET(
 ) AS result1;
 
 
-CREATE schema gold
+CREATE schema gold;
 
 CREATE VIEW gold.final AS
 select TOP 100 *
@@ -39,4 +39,8 @@ CREATE EXTERNAL TABLE gold.finaltable WITH (
         DATA_SOURCE = goldlayer,
         FILE_FORMAT = extfileformat
 ) AS
+SELECT * FROM gold.final2;
+
+SELECT * FROM gold.finaltable;
+
 SELECT * FROM gold.final2;
